@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tremolo - My Bloody Valentine</title>
+    <!-- Linking the specific CSS file for this page -->
+    <link rel="stylesheet" href="css/styletremolo.css">
+</head>
+<body id="top">
+
+    <!-- Sticky Header -->
+    <header>
+        <nav>
+            <a href="index.html" class="logo">mbv</a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="loveless.html">Loveless</a>
+                <a href="mbv.html">mbv</a>
+                <a href="made me.html">you made<br>me realise</a>
+                <a href="isnt any.html">isn't<br>anything</a>
+                <a href="feed me.html">feed me<br>with your<br>kiss</a>
+                <a href="glider.html">glider</a>
+                <a href="tremolo.html">tremolo</a>
+                <a href="rarities.html">rarities</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        
+        <!-- Full Width Banner -->
+        <section class="banner fade-section">
+            <img src="img/page 7/banner7.png" alt="Tremolo Banner" class="banner-img">
+        </section>
+
+        <!-- Album Details & Receipt Section (Background 1) -->
+        <section class="details-section fade-section bg1">
+            <div class="details-container">
+                <!-- Left Side: Album Cover & Tracklist -->
+                <div class="tracklist-container">
+                    <!-- Album Image with Spotify Link -->
+                    <a href="https://open.spotify.com/album/03UHwtQ59jUS4l8C1bekMA?si=XcSUb239SnmAI1fmJgiQlA&utm_source=copy-link" target="_blank" class="spotify-link">
+                        <img src="img/page 7/album7.png" alt="Tremolo Album Cover" class="album-cover">
+                    </a>
+                    
+                    <ul class="tracklist">
+                        <li>to here knows when</li>
+                        <li>swallow</li>
+                        <li>honey power</li>
+                        <li>moon song</li>
+                    </ul>
+                </div>
+
+                <!-- Right Side: Receipt Image -->
+                <div class="receipt-container">
+                    <img src="img/page 7/album reciept7.png" alt="Album Details Receipt" class="receipt-img">
+                </div>
+            </div>
+        </section>
+
+        <!-- tremolo (ep) Text Section (Background 2) -->
+        <section class="info-section fade-section bg2">
+            <h2 class="stylized-heading">tremolo (ep)</h2>
+            
+            <!-- New Split Layout to Balance Image and Text -->
+            <div class="split-layout">
+                <div class="split-text">
+                    <p class="larger-text">Tremolo E.P. is an <u>extended play</u> by Irish alternative rock band <u>My Bloody Valentine</u>, released in February 1991 by <u>Creation Records</u>. The EP was a critical success and topped the <u>UK Indie Chart</u>.[2] It featured the single "<u>To Here Knows When</u>", which subsequently appeared (in a different mix) on the band's second album <u>Loveless</u>.</p>
+                </div>
+                
+                <div class="split-image">
+                    <img src="img/page 7/pic1 page7.png" alt="Debbie Googe and Bilinda Butcher live">
+                    <span class="image-caption">Debbie Googe on bass and Bilinda Butcher on guitar with<br>My Bloody Valentine on the Loveless tour in their<br>notoriously high decibel performance of The Roxy on<br>February 4, 1992 in Los Angeles.</span>
+                </div>
+            </div>
+            
+            <div class="clear-float"></div>
+        </section>
+
+        <!-- Background Section (Background 3) -->
+        <section class="info-section fade-section bg3">
+            <h2 class="stylized-heading">Background</h2>
+            
+            <p>The EP featured the band more heavily utilising <u>samplers</u>, which allowed them to play back sounds on keyboard.[4] <u>Sampled</u> sounds include <u>guitar feedback</u>, vocals, and a BBC stock sound effects recording used to create a low-end effect on "To Here Knows When",[5] and a Turkish <u>belly dancing</u> track ripped from cassette on the track "Swallow".[4] The title is a reference to the band's heavy usage of guitar <u>tremolo</u> and <u>vibrato</u> to create blurred, dreamlike tones (<u>Kevin Shields</u>' method of strumming chords while simultaneously bending his guitar's tremolo/whammy bar was referred to as "<u>glide guitar</u>").</p>
+            
+            <div class="centered-image">
+                <img src="img/page 7/pic2 page7.png" alt="My Bloody Valentine 1990">
+                <span class="image-caption">My Bloody Valentine 1990</span>
+            </div>
+            
+            <p>In November 1991, Shields commented: "Tremolo had seven tracks on it, but you're not allowed to do that, so we called it four tracks and didn't name three of them. People just thought they were weird bits!"[6] The lead track, "To Here Knows When", has a longer and more ethereal <u>coda</u>—essentially constituting a separate song—than the version later included on the album <u>Loveless</u>. "Swallow" and "Honey Power" also each contain an instrumental coda. All three segues/codas feature backwards guitar loops and heavy reverb.</p>
+            
+            <p>In November 1991, Shields commented: "Tremolo had seven tracks on it, but you're not allowed to do that, so we called it four tracks and didn't name three of them. People just thought they were weird bits!"[6] The lead track, "To Here Knows When", has a longer and more ethereal <u>coda</u>—essentially constituting a separate song—than the version later included on the album <u>Loveless</u>. "Swallow" and "Honey Power" also each contain an instrumental coda. All three segues/codas feature backwards guitar loops and heavy reverb.</p>
+            
+            <div class="clear-float"></div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <a href="#top">BACK TO TOP</a>
+    </footer>
+
+    <!-- Script to handle bidirectional scroll-fade transitions -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const sections = document.querySelectorAll('.fade-section');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    } else {
+                        entry.target.classList.remove('visible');
+                    }
+                });
+            }, { threshold: 0.15 }); 
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+</body>
+</html>

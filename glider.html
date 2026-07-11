@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glider - My Bloody Valentine</title>
+    <!-- Linking the specific CSS file for this page -->
+    <link rel="stylesheet" href="css/styleglider.css">
+</head>
+<body id="top">
+
+    <!-- Sticky Header -->
+    <header>
+        <nav>
+            <a href="index.html" class="logo">mbv</a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="loveless.html">Loveless</a>
+                <a href="mbv.html">mbv</a>
+                <a href="made me.html">you made<br>me realise</a>
+                <a href="isnt any.html">isn't<br>anything</a>
+                <a href="feed me.html">feed me<br>with your<br>kiss</a>
+                <a href="glider.html">glider</a>
+                <a href="tremolo.html">tremolo</a>
+                <a href="rarities.html">rarities</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        
+        <!-- Full Width Banner -->
+        <section class="banner fade-section">
+            <img src="img/page 6/banner6.png" alt="glider Banner" class="banner-img">
+        </section>
+
+        <!-- Album Details & Receipt Section (bg1) -->
+        <section class="details-section fade-section bg1">
+            <div class="details-container">
+                <!-- Left Side: Album Cover & Tracklist -->
+                <div class="tracklist-container">
+                    <!-- Album Image with Spotify Link -->
+                    <a href="https://open.spotify.com/album/3oSLMALBuos75AqBHPdLrJ?si=PD0s4XcDSNuWKukb0xYvxg&utm_source=copy-link" target="_blank" class="spotify-link">
+                        <img src="img/page 6/album6.png" alt="glider Album Cover" class="album-cover">
+                    </a>
+                    
+                    <ul class="tracklist">
+                        <li>soon</li>
+                        <li>glider</li>
+                        <li>don't ask why</li>
+                        <li>off your face</li>
+                    </ul>
+                </div>
+
+                <!-- Right Side: Receipt Image -->
+                <div class="receipt-container">
+                    <img src="img/page 6/album reciept6.png" alt="Album Details Receipt" class="receipt-img">
+                </div>
+            </div>
+        </section>
+
+        <!-- glider (ep) Section (bg2) -->
+        <section class="info-section fade-section bg2">
+            <h2 class="stylized-heading">glider (ep)</h2>
+            
+            <p>Glider is an <u>EP</u> by Irish rock band <u>My Bloody Valentine</u>, released in April 1990 by <u>Creation Records</u>. The EP was also the group's first release on the <u>Sire Records</u> label in the United States. Containing the lead single "<u>Soon</u>", which featured <u>Kevin Shields</u>' "<u>glide guitar</u>" technique,[1] the EP peaked at number 2 on the UK Indie Chart,[2] and the band toured in summer 1990 to support its release.[3]</p>
+            
+            <p>An alternate mix of "Soon" was later included on the <u>Loveless</u> album.</p>
+
+            <div class="centered-image">
+                <img src="img/page 6/pic1 page6.png" alt="My Bloody Valentine perform at Manchester University">
+                <span class="image-caption">My Bloody Valentine perform at Manchester University, 10th February 1989.</span>
+            </div>
+            
+            <div class="clear-float"></div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <a href="#top">BACK TO TOP</a>
+    </footer>
+
+    <!-- Script to handle bidirectional scroll-fade transitions -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const sections = document.querySelectorAll('.fade-section');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    } else {
+                        entry.target.classList.remove('visible');
+                    }
+                });
+            }, { threshold: 0.15 }); 
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+</body>
+</html>

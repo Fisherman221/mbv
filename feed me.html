@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feed Me With Your Kiss - My Bloody Valentine</title>
+    <!-- Linking the specific CSS file for this page -->
+    <link rel="stylesheet" href="css/stylefeedme.css">
+</head>
+<body id="top">
+
+    <!-- Sticky Header -->
+    <header>
+        <nav>
+            <a href="index.html" class="logo">mbv</a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="loveless.html">Loveless</a>
+                <a href="mbv.html">mbv</a>
+                <a href="made me.html">you made<br>me realise</a>
+                <a href="isnt any.html">isn't<br>anything</a>
+                <a href="feed me.html">feed me<br>with your<br>kiss</a>
+                <a href="glider.html">glider</a>
+                <a href="tremolo.html">tremolo</a>
+                <a href="rarities.html">rarities</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        
+        <!-- Full Width Banner -->
+        <section class="banner fade-section">
+            <img src="img/page 5/banner5.png" alt="feed me with your kiss Banner" class="banner-img">
+        </section>
+
+        <!-- Album Details & Receipt Section (bg1) -->
+        <section class="details-section fade-section bg1">
+            <div class="details-container">
+                <!-- Left Side: Album Cover & Tracklist -->
+                <div class="tracklist-container">
+                    <!-- Album Image with Spotify Link -->
+                    <a href="https://open.spotify.com/album/32urJuNJoupcMIDo9FRoaD?si=1Qd6DDrhRu-TbSzTSzWtdg&utm_source=copy-link" target="_blank" class="spotify-link">
+                        <img src="img/page 5/album5.png" alt="feed me with your kiss Album Cover" class="album-cover">
+                    </a>
+                    
+                    <ul class="tracklist">
+                        <li>feed me with your kiss</li>
+                        <li>i believe</li>
+                        <li>emptiness inside</li>
+                        <li>i need no trust</li>
+                    </ul>
+                </div>
+
+                <!-- Right Side: Receipt Image -->
+                <div class="receipt-container">
+                    <img src="img/page 5/album reciept5.png" alt="Album Details Receipt" class="receipt-img">
+                </div>
+            </div>
+        </section>
+
+        <!-- feed me with your kiss (ep) Section (bg2) -->
+        <section class="info-section fade-section bg2">
+            <h2 class="stylized-heading">feed me with your kiss (ep)</h2>
+            <p>"Feed Me with Your Kiss" is a song by the <u>alternative rock</u> band <u>My Bloody Valentine</u>, and was released as a single and also the lead track to the EP of the same name through <u>Creation Records</u>. It is the seventh track and lead single from the band's debut studio album <u>Isn't Anything</u>. It was released on 31 October 1988.[1]</p>
+        </section>
+
+        <!-- Critical reception Section (bg3) -->
+        <section class="info-section fade-section bg3">
+            <h2 class="stylized-heading">Critical reception</h2>
+            
+            <div class="floated-image-right">
+                <img src="img/page 5/pic1 page5.png" alt="Kevin Shields performing">
+                <span class="image-caption">Coachella Valley Music and Arts Festival 2009 - Indio CA</span>
+            </div>
+            
+            <p>On the EP, <u>AllMusic</u> critic Nitsuh Abebe wrote, "They don't feel like songs that weren't quite good enough for Isn't Anything; they might display some of the stylistic tendencies of the Ecstasy and Wine period, but they're just as worthwhile as the album tracks." [2] In a review specific to the track itself, Stewart Mason of AllMusic found the track "more in keeping with the moody, <u>gothy rock</u> of My Bloody Valentine's much-inferior earliest records." Mason also stated that the track "has a peculiar feel, pitched somewhere between the bombastic self-importance of mid-'80s <u>Nick Cave</u> and the ethereality of prime <u>Cocteau Twins</u>, mixed with the same sort of slightly dopey S&M-tinged lyrics as the roughly contemporaneous <u>"Cigarette in Your Bed"</u>, proving that it was in the long run a very smart idea for Kevin Shields to completely bury the lyrics on My Bloody Valentine's later work."[3] <u>Digital Spy</u> commended the "ear-splitting <u>garage rock</u> scuzz of the title track.[4]</p>
+            
+            <div class="clear-float"></div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <a href="#top">BACK TO TOP</a>
+    </footer>
+
+    <!-- Script to handle bidirectional scroll-fade transitions -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const sections = document.querySelectorAll('.fade-section');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    } else {
+                        entry.target.classList.remove('visible');
+                    }
+                });
+            }, { threshold: 0.15 }); 
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+</body>
+</html>

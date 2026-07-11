@@ -1,0 +1,213 @@
+/* General Reset & Layout */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+    max-width: 1920px;
+    min-height: 1080px;
+    margin: 0 auto;
+    overflow-x: hidden; 
+}
+
+/* Header & Nav Formatting */
+header {
+    position: sticky;
+    top: 0;
+    background-color: #8c0c2a; /* Deep reddish-burgundy to match the image */
+    z-index: 1000;
+    padding: 10px 40px;
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.logo {
+    font-family: Impact, 'Arial Black', sans-serif;
+    font-size: 2.8rem;
+    color: #000;
+    font-weight: 900;
+    text-decoration: none;
+    letter-spacing: -2px;
+    margin-right: 50px; /* Fixed margin to separate logo from first link */
+}
+
+/* Updated Nav Links to stretch from left to right evenly */
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Dynamically spaces the items across available width */
+    flex-grow: 1; /* Instructs the links container to fill the remaining header space */
+    flex-wrap: nowrap; /* Prevents elements from dropping to a new line */
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    text-align: center;
+    line-height: 1.1;
+    font-weight: 500;
+    transition: opacity 0.2s ease;
+}
+
+.nav-links a:hover {
+    opacity: 0.7;
+}
+
+/* Intro Section (Groups Banner & Text together for the fade) */
+.intro-section {
+    width: 100%;
+}
+
+/* Banner Image - Fixed to look like a standard Cyberpunk-style Hero Banner */
+.banner {
+    width: 100%;
+}
+
+.banner-img {
+    width: 100%;
+    max-height: 70vh; /* Limits height so it acts like a wide website banner */
+    object-fit: cover; /* Ensures the image fills the space without stretching */
+    object-position: top center;
+    display: block;
+}
+
+/* Black Title Bar */
+.history-title {
+    background-color: #000;
+    text-align: center;
+    padding: 15px 0;
+}
+
+.history-title h1 {
+    font-size: 2.8rem;
+    font-weight: bold;
+    color: #fff;
+    margin: 0;
+}
+
+/* Textured Text Section */
+.history-context {
+    background-image: url('../img/main page/bg text.png'); 
+    background-size: cover;
+    background-position: center;
+    padding: 50px 12%;
+    text-align: center;
+}
+
+.history-context p {
+    font-size: 1.1rem;
+    line-height: 1.4;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+}
+
+.history-context u {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+/* Album Sections */
+.album-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.album {
+    width: 100%;
+    height: 600px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10%;
+}
+
+.album-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1400px;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 30px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.album-link:hover .album-content {
+    transform: scale(1.02);
+}
+
+.album img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+}
+
+.album-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+}
+
+.album-text.right { text-align: right; align-items: flex-end; }
+.album-text.left { text-align: left; align-items: flex-start; }
+
+.year { font-size: 1.5rem; font-weight: bold; margin-bottom: 5px; }
+.band-name { font-size: 1.2rem; letter-spacing: 2px; margin-bottom: 15px; }
+.album h2 { font-size: 4rem; font-weight: 900; text-transform: lowercase; }
+
+/* Dynamic Backgrounds */
+.bg1 { background-image: url('../img/main page/bg1.png'); }
+.bg2 { background-image: url('../img/main page/bg2.png'); }
+.bg3 { background-image: url('../img/main page/bg3.png'); }
+.bg4 { background-image: url('../img/main page/bg4.png'); }
+.bg5 { background-image: url('../img/main page/bg5.png'); }
+.bg6 { background-image: url('../img/main page/bg6.png'); }
+.bg7 { background-image: url('../img/main page/bg7.png'); }
+.bg8 { background-image: url('../img/main page/bg8.png'); }
+
+/* Pure Fade Animation Transition */
+.fade-section {
+    opacity: 0;
+    transition: opacity 1s ease-in-out; /* Removed slide, purely transitions opacity */
+}
+
+.fade-section.visible {
+    opacity: 1;
+}
+
+/* Footer */
+footer {
+    background-color: #000;
+    text-align: center;
+    padding: 50px 0;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+    letter-spacing: 3px;
+}

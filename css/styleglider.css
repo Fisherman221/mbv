@@ -1,0 +1,242 @@
+/* General Reset & Layout */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+    max-width: 1920px;
+    min-height: 1080px;
+    margin: 0 auto;
+    overflow-x: hidden; 
+}
+
+/* Header & Nav Formatting */
+header {
+    position: sticky;
+    top: 0;
+    background-color: #a81c40; /* Matched the pinkish red from the mockup header */
+    z-index: 1000;
+    padding: 15px 40px;
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.logo {
+    font-family: Impact, 'Arial Black', sans-serif; 
+    font-size: 2.8rem;
+    color: #000;
+    font-weight: 900;
+    text-decoration: none;
+    letter-spacing: -2px;
+    margin-right: 50px; 
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    flex-grow: 1; 
+    flex-wrap: nowrap; 
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    text-align: center;
+    line-height: 1.1;
+    font-weight: 500;
+    transition: opacity 0.2s ease;
+}
+
+.nav-links a:hover {
+    opacity: 0.7;
+}
+
+/* Full Width Banner */
+.banner {
+    width: 100%;
+}
+
+.banner-img {
+    width: 100%;
+    display: block;
+    height: auto;
+}
+
+/* Base Sections Layout */
+.details-section {
+    padding: 60px 10%;
+}
+
+.info-section {
+    padding: 50px 15%;
+    overflow: hidden; 
+}
+
+/* Background Images for "glider" page */
+.bg1 { background: #b05c86 url('../img/page 6/bg1 page6.png') center/cover; }
+.bg2 { background: #355d91 url('../img/page 6/bg2 page6.png') center/cover; }
+
+/* Details and Layout */
+.details-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1300px;
+    margin: 0 auto;
+    gap: 30px;
+}
+
+.tracklist-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 35%;
+    margin-top: 20px;
+}
+
+.spotify-link {
+    display: block;
+    margin-bottom: 25px;
+    transition: transform 0.3s ease;
+}
+
+.spotify-link:hover {
+    transform: scale(1.03);
+}
+
+.album-cover {
+    width: 100%;
+    max-width: 350px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    border: 2px solid rgba(255,255,255,0.2);
+}
+
+.tracklist {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    margin-top: 15px;
+}
+
+.tracklist li {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #fff;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
+}
+
+/* Image Receipt Formatting */
+.receipt-container {
+    width: 65%;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -10px;
+}
+
+.receipt-img {
+    width: 100%;
+    max-width: 680px; 
+    height: auto;
+    filter: drop-shadow(0 15px 25px rgba(0,0,0,0.6)); 
+}
+
+/* Info Section Text Styling */
+.stylized-heading {
+    font-family: 'Cooper Black', 'Impact', serif; 
+    font-size: 3.5rem;
+    color: #fff;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 0px rgba(0,0,0,0.2);
+    font-weight: normal;
+}
+
+.info-section p {
+    font-size: 1.15rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.4); 
+}
+
+.info-section u {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    color: #fff;
+}
+
+/* Centered Image Wrapper */
+.centered-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #dcdcdc;
+    padding: 15px;
+    margin: 40px auto;
+    max-width: 800px;
+    border-radius: 2px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.centered-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.image-caption {
+    display: block;
+    margin-top: 10px;
+    color: #a81c40; /* Match header dark red */
+    font-weight: 800;
+    font-size: 0.95rem;
+    letter-spacing: -0.5px;
+}
+
+/* Utilities */
+.clear-float {
+    clear: both;
+}
+
+/* Fade Animation Transition */
+.fade-section {
+    opacity: 0;
+    transition: opacity 1s ease-in-out; 
+}
+
+.fade-section.visible {
+    opacity: 1;
+}
+
+/* Footer */
+footer {
+    background-color: #000;
+    text-align: center;
+    padding: 50px 0;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+    letter-spacing: 3px;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #a81c40;
+}
